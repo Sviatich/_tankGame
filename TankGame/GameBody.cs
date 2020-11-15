@@ -50,7 +50,13 @@ namespace TankGame
                         myTank.Reload();
                         EnemyStep(myTank, enemyTank);
                         break;
-                    default://Выход из игры
+                    case 4://Выход
+                        break;
+                    default://Неверный ввод
+                        Console.WriteLine("Неверный ввод. Нажмите чтоб продолжить..");
+                        Console.ReadKey();
+                        Console.Clear();
+                        Open(myTank, enemyTank);
                         break;
                 }
             }
