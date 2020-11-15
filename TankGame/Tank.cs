@@ -74,7 +74,7 @@ namespace TankGame
         {
             if (this.myHealth < 100)
             {
-                this.myHealth += 20;//Восполняет 10 HP после выполнения
+                this.myHealth += 20;//Восполняет 20 единиц здоровья после выполнения
                 Console.WriteLine("Восстановлено 20 здоровья. Нажмите кнопку для продолжения...");
             }
             else 
@@ -84,16 +84,10 @@ namespace TankGame
         }
         public void reload()//Метод перезарядки
         {
-            this.myAmmo += 5;//Пополняем боезапас
+            this.myAmmo += 5;//Пополняем 5 единиц боезапаса
             Console.WriteLine("Добавлено 5 снарядов. Нажмите кнопку для продолжения...");
         }
-        public double getHealth()//Возвращает значения здоровья
-        {
-            return this.myHealth;
-        }
-        public int getAmmo()//Возвращает значения кол-ва снарядов
-        {
-            return this.myAmmo;
-        }
+        public double getHealth() => this.myHealth; //Возвращает значения здоровья
+        public int getAmmo() => this.myAmmo; //Возвращает значения кол-ва снарядов
     }
 }

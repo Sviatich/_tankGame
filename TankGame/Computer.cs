@@ -6,25 +6,25 @@ namespace TankGame
 {
     class Computer : IComputer
     {
-        public static void aiStep(Tank enemyTank, Tank myTank)
+        public void aiStep(Tank enemyTank, Tank myTank)
         {
             int rand = new Random().Next(2);
             if (rand > 0) //Делает выстрел
             {
-                if (enemyTank.getAmmo() > 0)
+                if (enemyTank.getAmmo() > 0)//Если боезапас не пустой, то стреляем
                 {
                     enemyTank.shot(myTank);
                 }
-                else
+                else//Если боезапас пустой, то перезаряжаемся
                 {
                     enemyTank.reload();
                 }
             }
             else //Ремонтируется
             {
-                if (enemyTank.getHealth() >= 70)
+                if (enemyTank.getHealth() >= 70) //Если восстанавление здоровья не требуется, стреляем
                 {
-                    if (enemyTank.getAmmo() > 0)
+                    if (enemyTank.getAmmo() > 0) //Стреляем ели есть снаряды
                     {
                         enemyTank.shot(myTank);
                     }
@@ -33,7 +33,7 @@ namespace TankGame
                         enemyTank.reload();
                     }
                 }
-                else
+                else //Если здоровье не в максимуме, то возсстанавливаем N единиц
                 {
                     enemyTank.repair();
                 }

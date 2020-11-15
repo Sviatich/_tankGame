@@ -6,6 +6,6 @@ namespace TankGame
 {
     interface IComputer
     {
-        static void aiStep(Tank enemyTank, Tank myTank) { }
+        void aiStep(Tank enemyTank, Tank myTank); //Метод определяющий действия бота Танка
     }
 }

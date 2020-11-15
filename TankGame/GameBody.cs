@@ -1,5 +1,5 @@
 ﻿//Класс меню, также по сути представляющий основное тело игры, отвечает за запуск
-//действий, выбранных игроком
+//действий, выбранных игроком.
 //Управляет последовательностью ходов игрок/бот
 
 using System;
@@ -65,19 +65,20 @@ namespace TankGame
         }
         public static void show() //Вывод всех возможных действий
         {
-            Console.WriteLine("1.Выстрел\n2.Починка\n3.Перезарядка\n4.Завершить бой");
+            Console.WriteLine("1.Выстрел\n2.Ремонт\n3.Перезарядка\n4.Завершить бой");
         }
         public static void enemyStep(Tank myTank, Tank enemyTank)
         {
+            Computer Call = new Computer();
             Console.ReadKey();//Передача хода компьютеру
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Clear();//Очистка консольного окна
+            Console.ForegroundColor = ConsoleColor.Green;//Красим текст в зеленый
             myTank.getStatus(); //Выводим текущее состояние нашего танка
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Red;//Красим текст в красный
             enemyTank.getStatus(); //Выводим текущее состояние вражеского танка
-            Console.ResetColor();
+            Console.ResetColor();//Сброс цвета
             Console.WriteLine("\nХод противника!\n");//Индикация передачи хода
-            Computer.aiStep(enemyTank, myTank);//Компьютер совершает ход
+            Call.aiStep(enemyTank, myTank);//Компьютер совершает ход
             Console.ReadKey();//Передача хода игроку
             Console.Clear();//Очистка консоли
             open(myTank, enemyTank);//Перезапуск хода путем вызова игрового меню
