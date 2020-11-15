@@ -4,38 +4,38 @@ using System;
 
 namespace TankGame
 {
-    class Computer : IComputer
+    class Computer : IComputer<Tank>
     {
-        public void aiStep(Tank enemyTank, Tank myTank)
+        public void AiStep(Tank enemyTank, Tank myTank)
         {
             int rand = new Random().Next(2);
             if (rand > 0) //Делает выстрел
             {
-                if (enemyTank.getAmmo() > 0)//Если боезапас не пустой, то стреляем
+                if (enemyTank.MyAmmo > 0)//Если боезапас не пустой, то стреляем
                 {
-                    enemyTank.shot(myTank);
+                    enemyTank.Shot(myTank);
                 }
                 else//Если боезапас пустой, то перезаряжаемся
                 {
-                    enemyTank.reload();
+                    enemyTank.Reload();
                 }
             }
             else //Ремонтируется
             {
-                if (enemyTank.getHealth() >= 70) //Если восстанавление здоровья не требуется, стреляем
+                if (enemyTank.MyHealth >= 70) //Если восстанавление здоровья не требуется, стреляем
                 {
-                    if (enemyTank.getAmmo() > 0) //Стреляем ели есть снаряды
+                    if (enemyTank.MyAmmo > 0) //Стреляем ели есть снаряды
                     {
-                        enemyTank.shot(myTank);
+                        enemyTank.Shot(myTank);
                     }
                     else
                     {
-                        enemyTank.reload();
+                        enemyTank.Reload();
                     }
                 }
                 else //Если здоровье не в максимуме, то возсстанавливаем N единиц
                 {
-                    enemyTank.repair();
+                    enemyTank.Repair();
                 }
             }
         }

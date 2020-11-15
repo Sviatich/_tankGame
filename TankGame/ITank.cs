@@ -4,13 +4,17 @@ using System;
 
 namespace TankGame
 {
-    interface ITank
+    interface ITank<T>
     {
-        void getStatus();//Метод возвращает текущее состояние объекта
-        void shot(Tank enemy);//Метод выстрела
-        void repair();//Метод восполнения здоровья
-        void reload();//Метод перезарядки
-        double getHealth();//Метод возвращает текущее здоровье
-        int getAmmo();//Метод возвращает текущее кол-во снарядов
+        public int iD { get; set; } //Индекс для вывода в консоль
+        public double MyArmor { get; set; } //Количесто брони
+        public double MyHealth { get; set; } //Количесто здоровья
+        public int MyDamage { get; set; } //Количесто урона
+        public int MyAmmo { get; set; } //Количесто снатядов
+
+        void GetStatus();//Метод возвращает текущее состояние объекта
+        void Shot(T enemy);//Метод выстрела
+        void Repair();//Метод восполнения здоровья
+        void Reload();//Метод перезарядки
     }
 }

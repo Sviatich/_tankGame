@@ -8,16 +8,16 @@ namespace TankGame
 {
     class GameBody
     {
-        public static bool open(Tank myTank, Tank enemyTank)//Функция вызова контекстного меню
+        public static bool Open(Tank myTank, Tank enemyTank)//Функция вызова контекстного меню
         {
-            if(myTank.getHealth() <= 0)//Проверка на поражение
+            if(myTank.MyHealth <= 0)//Проверка на поражение
             {
                 Console.WriteLine("Вы проиграли!");
                 Console.WriteLine("\nНажмите для выхода..");
                 Console.ReadKey();
                 return true;
             }
-            if(enemyTank.getHealth() <= 0)//Проверка на победу
+            if(enemyTank.MyHealth <= 0)//Проверка на победу
             {
                 Console.WriteLine("Победа!");
                 Console.WriteLine("\nНажмите для выхода..");
@@ -25,13 +25,13 @@ namespace TankGame
                 return true;
             }
             Console.ForegroundColor = ConsoleColor.Green;
-            myTank.getStatus(); //Выводим текущее состояние нашего танка
+            myTank.GetStatus(); //Выводим текущее состояние нашего танка
             Console.ForegroundColor = ConsoleColor.Red;
-            enemyTank.getStatus(); //Выводим текущее состояние вражеского танка
+            enemyTank.GetStatus(); //Выводим текущее состояние вражеского танка
             Console.ResetColor();
             Console.WriteLine("\nВаш ход!\n");
             int int_choice;
-            show(); //Выводим варианты действий
+            Show(); //Выводим варианты действий
             try//Отлавливаем исключения при вводе данных
             {
                 string _choice = Console.ReadLine(); //Выбираем с клавиатуры режим
@@ -39,16 +39,16 @@ namespace TankGame
                 switch (int_choice) //Рекурсивный выбор 
                 {
                     case 1://Выстрел
-                        myTank.shot(enemyTank);//Игрок стреляет
-                        enemyStep(myTank,enemyTank);
+                        myTank.Shot(enemyTank);//Игрок стреляет
+                        EnemyStep(myTank,enemyTank);
                         break;
                     case 2://Починка
-                        myTank.repair();//Игрок ремонтируется
-                        enemyStep(myTank, enemyTank);
+                        myTank.Repair();//Игрок ремонтируется
+                        EnemyStep(myTank, enemyTank);
                         break;
                     case 3://Перезарядка
-                        myTank.reload();
-                        enemyStep(myTank, enemyTank);
+                        myTank.Reload();
+                        EnemyStep(myTank, enemyTank);
                         break;
                     default://Выход из игры
                         break;
@@ -59,29 +59,29 @@ namespace TankGame
                 Console.WriteLine("Неверный ввод. Нажмите чтоб продолжить..");
                 Console.ReadKey();
                 Console.Clear();
-                open(myTank, enemyTank);//Перезапуск хода путем вызова игрового меню
+                Open(myTank, enemyTank);//Перезапуск хода путем вызова игрового меню
             }
         return true;
         }
-        public static void show() //Вывод всех возможных действий
+        public static void Show() //Вывод всех возможных действий
         {
             Console.WriteLine("1.Выстрел\n2.Ремонт\n3.Перезарядка\n4.Завершить бой");
         }
-        public static void enemyStep(Tank myTank, Tank enemyTank)
+        public static void EnemyStep(Tank myTank, Tank enemyTank)
         {
             Computer Call = new Computer();
             Console.ReadKey();//Передача хода компьютеру
             Console.Clear();//Очистка консольного окна
             Console.ForegroundColor = ConsoleColor.Green;//Красим текст в зеленый
-            myTank.getStatus(); //Выводим текущее состояние нашего танка
+            myTank.GetStatus(); //Выводим текущее состояние нашего танка
             Console.ForegroundColor = ConsoleColor.Red;//Красим текст в красный
-            enemyTank.getStatus(); //Выводим текущее состояние вражеского танка
+            enemyTank.GetStatus(); //Выводим текущее состояние вражеского танка
             Console.ResetColor();//Сброс цвета
             Console.WriteLine("\nХод противника!\n");//Индикация передачи хода
-            Call.aiStep(enemyTank, myTank);//Компьютер совершает ход
+            Call.AiStep(enemyTank, myTank);//Компьютер совершает ход
             Console.ReadKey();//Передача хода игроку
             Console.Clear();//Очистка консоли
-            open(myTank, enemyTank);//Перезапуск хода путем вызова игрового меню
+            Open(myTank, enemyTank);//Перезапуск хода путем вызова игрового меню
         }
     }
 }

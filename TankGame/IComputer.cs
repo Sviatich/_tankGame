@@ -4,8 +4,8 @@ using System;
 
 namespace TankGame
 {
-    interface IComputer
+    interface IComputer<T>
     {
-        void aiStep(Tank enemyTank, Tank myTank); //Метод определяющий действия бота Танка
+        void AiStep(T enemyTank, T myTank); //Метод определяющий действия бота Танка
     }
 }
