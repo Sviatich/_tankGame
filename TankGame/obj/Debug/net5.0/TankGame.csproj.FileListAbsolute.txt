@@ -1,0 +1,16 @@
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\net5.0\TankGame.exe
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\net5.0\TankGame.deps.json
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\net5.0\TankGame.runtimeconfig.json
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\net5.0\TankGame.runtimeconfig.dev.json
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\net5.0\TankGame.dll
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\net5.0\ref\TankGame.dll
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\net5.0\TankGame.pdb
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\TankGame.csprojAssemblyReference.cache
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\TankGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\TankGame.AssemblyInfoInputs.cache
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\TankGame.AssemblyInfo.cs
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\TankGame.csproj.CoreCompileInputs.cache
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\TankGame.dll
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\ref\TankGame.dll
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\TankGame.pdb
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\net5.0\TankGame.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\netcoreapp3.1\TankGame.exe
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\netcoreapp3.1\TankGame.deps.json
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\netcoreapp3.1\TankGame.runtimeconfig.json
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\netcoreapp3.1\TankGame.runtimeconfig.dev.json
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\netcoreapp3.1\TankGame.dll
+C:\Users\titan\source\repos\TankGame\TankGame\bin\Debug\netcoreapp3.1\TankGame.pdb
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\netcoreapp3.1\TankGame.csprojAssemblyReference.cache
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\netcoreapp3.1\TankGame.AssemblyInfoInputs.cache
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\netcoreapp3.1\TankGame.AssemblyInfo.cs
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\netcoreapp3.1\TankGame.csproj.CoreCompileInputs.cache
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\netcoreapp3.1\TankGame.dll
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\netcoreapp3.1\TankGame.pdb
+C:\Users\titan\source\repos\TankGame\TankGame\obj\Debug\netcoreapp3.1\TankGame.genruntimeconfig.cache
